@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rébus interactif : Annonce spéciale !</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="etape1" class="etape">
+    <h1>Un bug a été détecté dans notre système...</h1>
+    <p>Quel est le langage de programmation préféré des bébés ?</p>
+    <button onclick="verifierReponse('c')">a) Python</button>
+    <button onclick="verifierReponse('b')">b) Java</button>
+    <button onclick="verifierReponse('a')">c) BabyScript</button>
+  </div>
+
+  <div id="etape2" class="etape" style="display: none;">
+    <h2>Indice : Quelque chose de mignon arrive bientôt...</h2>
+    <img src="assets/bebe.png" alt="Bébé" width="100">
+    <button onclick="afficherEtape3()">Continuer</button>
+  </div>
+
+  <div id="etape3" class="etape" style="display: none;">
+    <h2>Résolvez ce rébus : 🍼 + 👶 + 🎂 = ?</h2>
+    <button onclick="afficherRevelation()">Voir la réponse</button>
+  </div>
+
+  <div id="revelation" class="etape" style="display: none;">
+    <h1>Félicitations, vous avez résolu le bug !</h1>
+    <p>Nous attendons un enfant pour Juillet 2025 (date de release non exhaustive) !</p>
+    <p id="gender-reveal">C'est un garçon ! 🎉👶</p>
+    <img src="assets/garcon.png" alt="Garçon" width="150">
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
